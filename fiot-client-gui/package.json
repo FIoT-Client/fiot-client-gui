@@ -1,6 +1,9 @@
 {
   "name": "fiot-client-gui",
   "version": "0.0.0",
+  "description": "WEB client using FIoT-Client library to access FIWARE IoT and Context APIs",
+  "author": "Lucas Cristiano Calixto Dantas",
+  "copyright": "Copyright 2017 Lucas Cristiano Calixto Dantas",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -22,6 +25,8 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
+    "ng2-charts": "^1.6.0",
+    "ngx-bootstrap": "^1.9.3",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
