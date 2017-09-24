@@ -4,7 +4,6 @@ import { LoginService } from '../login.service';
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [LoginService]
 })
 export class LoginComponent implements OnInit {
 
@@ -19,7 +18,13 @@ export class LoginComponent implements OnInit {
   login() {
     if(this.loginService.doLogin(this.username, this.password)) {
       console.log("Success");
+    } else {
+      console.log("Error");
     }
+  }
+
+  recoverPassword() {
+    console.log("Recover password");
   }
 
   register() {

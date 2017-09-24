@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/components/login.component';
+import { AuthGuard } from './auth.guard';
 
 // Import Containers
 import {
@@ -25,6 +26,12 @@ export const routes: Routes = [
     data: {
       title: 'Home'
     },
+    canActivate:  [
+      AuthGuard
+    ],
+    canLoad: [
+      AuthGuard
+    ],
     children: [
       {
         path: 'dashboard',
@@ -54,6 +61,12 @@ export const routes: Routes = [
     data: {
       title: 'Pages'
     },
+    canActivate:  [
+      AuthGuard
+    ],
+    canLoad: [
+      AuthGuard
+    ],
     children: [
       {
         path: '',
