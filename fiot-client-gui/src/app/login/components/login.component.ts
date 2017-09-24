@@ -7,8 +7,8 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent implements OnInit {
 
-  username: string = "";
-  password: string = "";
+  username = '';
+  password = '';
 
   constructor(private loginService: LoginService) { }
 
@@ -16,15 +16,15 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if(this.loginService.doLogin(this.username, this.password)) {
-      console.log("Success");
+    if (this.loginService.doLogin(this.username, this.password)) {
+      console.log('Success');
     } else {
-      console.log("Error");
+      console.log('Error');
     }
   }
 
   recoverPassword() {
-    console.log("Recover password");
+    console.log('Recover password');
   }
 
   register() {

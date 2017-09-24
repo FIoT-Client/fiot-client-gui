@@ -8,8 +8,8 @@ export class LoginService {
   constructor(private authService: AuthService, private router: Router) { }
 
   doLogin(username: string, password: string) : boolean {
-    //TODO Change to real login verification
-    if (username == 'admin' && password == 'password') {
+    // TODO Change to real login verification
+    if (username === 'admin' && password === 'password') {
       this.authService.logIn(username, password);
       this.router.navigate(['/']);
       return true;

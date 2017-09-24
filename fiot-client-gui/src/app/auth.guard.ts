@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate, CanLoad {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     console.log(`Logged user: ${JSON.stringify(this.authService.loggedUser)}`);
-    if(this.authService.isLoggedIn()) {
+    if (this.authService.isLoggedIn()) {
       return true;
     } else {
       // navigate to login page
