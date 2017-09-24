@@ -1,0 +1,47 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+          <strong>Entities</strong>
+          <small>IDs</small>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <tr *ngFor="let entity of entities" (click)="selectEntity(entity)">
+                <td>{{entity.id}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-block">Create New Entity</button>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-8">
+      <div>
+        <!-- Nav tabs -->
+        <tabset>
+          <tab>
+            <ng-template tabHeading><i class="icon-info"></i> Info</ng-template>
+            <div *ngIf="!selectedEntity">
+              No entity selected
+            </div>
+            <div *ngIf="selectedEntity">
+              Info of {{selectedEntity.id}}
+            </div>
+          </tab>
+          <tab>
+            <ng-template tabHeading><i class="icon-eye"></i> Subscriptions</ng-template>
+            <div *ngIf="!selectedEntity">
+              No entity selected
+            </div>
+            <div *ngIf="selectedEntity">
+              Subscriptions of {{selectedEntity.id}}
+            </div>
+          </tab>
+        </tabset>
+      </div><!--/.col-->
+    </div><!--/.col-->
+  </div><!--/.row-->
+</div>

@@ -8,7 +8,7 @@ export class AuthService {
   constructor() { }
 
   isLoggedIn() {
-    return this.loggedUser != null && this.loggedUser != {};
+    return this.loggedUser != null && this.loggedUser !== {};
   }
 
   logIn(username: string, password: string) {

@@ -38,6 +38,14 @@ export const routes: Routes = [
         loadChildren: './views/dashboard/dashboard.module#DashboardModule'
       },
       {
+        path: 'context',
+        loadChildren: './views/context/context.module#ContextModule'
+      },
+      {
+        path: 'iot',
+        loadChildren: './views/iot/iot.module#IotModule'
+      },
+      {
         path: 'components',
         loadChildren: './views/components/components.module#ComponentsModule'
       },
