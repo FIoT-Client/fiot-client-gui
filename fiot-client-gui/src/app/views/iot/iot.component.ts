@@ -1,23 +1,30 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalDirective } from 'ngx-bootstrap/modal/modal.component';
+import { IotService } from './iot.service';
 
 @Component({
   templateUrl: 'iot.component.html'
 })
 export class IotComponent implements OnInit {
 
-  entities = [ {'id': 'LDR001'}, {'id': 'LDR002'}, {'id': 'LDR003'} ];
-  selectedEntity = null;
+  public registerNewDeviceModal;
 
-  public largeModal;
+  public devices = [];
+  public selectedDevice = null;
 
-  constructor( ) { }
+  constructor(private iotService: IotService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.iotService.getDevices()
+      .then(devices => {
+        console.log(devices);
+        this.devices = devices;
+      });
+  }
 
-  selectEntity(entity) {
-    this.selectedEntity = entity;
+  selectDevice(device) {
+    this.selectedDevice = device;
   }
 
 }

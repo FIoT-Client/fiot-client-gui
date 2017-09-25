@@ -3,59 +3,66 @@
     <div class="col-sm-4">
       <div class="card">
         <div class="card-header">
-          <strong>Entities</strong>
+          <strong>Devices</strong>
           <small>IDs</small>
         </div>
         <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-              <tr *ngFor="let entity of entities" (click)="selectEntity(entity)">
-                <td>{{entity.id}}</td>
-              </tr>
-            </table>
+          <div *ngIf="devices">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tr *ngFor="let device of devices" (click)="selectDevice(device)">
+                  <td>{{device.device_id}}</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="largeModal.show()">
-          Create New Entity
-        </button>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="createNewEntityModal.show()">
+            Register New Device
+          </button>
       </div>
-    </div><!--/.col-->
+    </div>
+    <!--/.col-->
     <div class="col-sm-8">
       <div>
         <!-- Nav tabs -->
         <tabset>
           <tab>
             <ng-template tabHeading><i class="icon-info"></i> Info</ng-template>
-            <div *ngIf="!selectedEntity">
-              No entity selected
+            <div *ngIf="!selectedDevice">
+              No device selected
             </div>
-            <div *ngIf="selectedEntity">
-              Info of {{selectedEntity.id}}
+            <div *ngIf="selectedDevice">
+              Info of {{selectedDevice.device_id}}
             </div>
           </tab>
           <tab>
             <ng-template tabHeading><i class="icon-eye"></i> Subscriptions</ng-template>
-            <div *ngIf="!selectedEntity">
-              No entity selected
+            <div *ngIf="!selectedDevice">
+              No device selected
             </div>
-            <div *ngIf="selectedEntity">
-              Subscriptions of {{selectedEntity.id}}
+            <div *ngIf="selectedDevice">
+              Subscriptions of {{selectedDevice.device_id}}
             </div>
           </tab>
         </tabset>
-      </div><!--/.col-->
-    </div><!--/.col-->
-  </div><!--/.row-->
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
 </div>
 
-<div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div bsModal #createNewEntityModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Create New Entity</h4>
-        <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" (click)="createNewEntityModal.hide()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -67,7 +74,8 @@
                   <input type="text" class="form-control" id="entityId" placeholder="Ex: LDR001">
                 </div>
               </div>
-            </div><!--/.row-->
+            </div>
+            <!--/.row-->
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
@@ -75,8 +83,10 @@
                   <input type="text" class="form-control" id="entityType" placeholder="Ex: LDR">
                 </div>
               </div>
-            </div><!--/.row-->
-          </div><!--/.col-->
+            </div>
+            <!--/.row-->
+          </div>
+          <!--/.col-->
           <div class="col-sm-7">
             <div class="row">
               <div class="col-sm-12">
@@ -88,14 +98,20 @@
                   <button type="button" class="btn btn-outline-primary"><i class="fa fa-question"></i></button>
                 </div>
               </div>
-            </div><!--/.row-->
-          </div><!--/.col-->
-        </div><!--/.row-->
+            </div>
+            <!--/.row-->
+          </div>
+          <!--/.col-->
+        </div>
+        <!--/.row-->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click)="largeModal.hide()">Cancel</button>
+        <button type="button" class="btn btn-secondary" (click)="createNewEntityModal.hide()">Cancel</button>
         <button type="button" class="btn btn-primary">Register Entity</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

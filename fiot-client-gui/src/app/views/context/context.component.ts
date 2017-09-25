@@ -1,20 +1,27 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalDirective } from 'ngx-bootstrap/modal/modal.component';
+import { ContextService } from './context.service';
 
 @Component({
   templateUrl: 'context.component.html'
 })
 export class ContextComponent implements OnInit {
 
-  entities = [ {'id': 'LDR001'}, {'id': 'LDR002'}, {'id': 'LDR003'} ];
-  selectedEntity = null;
+  public createNewEntityModal;
 
-  public largeModal;
+  public entities = [];
+  public selectedEntity = null;
 
-  constructor( ) { }
+  constructor(private contextService: ContextService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.contextService.getEntities()
+      .then(entities => {
+        console.log(entities);
+        this.entities = entities;
+      });
+  }
 
   selectEntity(entity) {
     this.selectedEntity = entity;

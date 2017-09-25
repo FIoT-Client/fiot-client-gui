@@ -1,12 +1,13 @@
 <div class="animated fadeIn">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-header">
-            <strong>Entities</strong>
-            <small>IDs</small>
-          </div>
-          <div class="card-body">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+          <strong>Entities</strong>
+          <small>IDs</small>
+        </div>
+        <div class="card-body">
+          <div *ngIf="entities">
             <div class="table-responsive">
               <table class="table table-bordered table-striped">
                 <tr *ngFor="let entity of entities" (click)="selectEntity(entity)">
@@ -15,87 +16,101 @@
               </table>
             </div>
           </div>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="largeModal.show()">
-            Create New Entity
-          </button>
         </div>
-      </div><!--/.col-->
-      <div class="col-sm-8">
-        <div>
-          <!-- Nav tabs -->
-          <tabset>
-            <tab>
-              <ng-template tabHeading><i class="icon-info"></i> Info</ng-template>
-              <div *ngIf="!selectedEntity">
-                No entity selected
-              </div>
-              <div *ngIf="selectedEntity">
-                Info of {{selectedEntity.id}}
-              </div>
-            </tab>
-            <tab>
-              <ng-template tabHeading><i class="icon-eye"></i> Subscriptions</ng-template>
-              <div *ngIf="!selectedEntity">
-                No entity selected
-              </div>
-              <div *ngIf="selectedEntity">
-                Subscriptions of {{selectedEntity.id}}
-              </div>
-            </tab>
-          </tabset>
-        </div><!--/.col-->
-      </div><!--/.col-->
-    </div><!--/.row-->
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="createNewEntityModal.show()">
+          Create New Entity
+        </button>
+      </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-8">
+      <div>
+        <!-- Nav tabs -->
+        <tabset>
+          <tab>
+            <ng-template tabHeading><i class="icon-info"></i> Info</ng-template>
+            <div *ngIf="!selectedEntity">
+              No entity selected
+            </div>
+            <div *ngIf="selectedEntity">
+              Info of {{selectedEntity.id}}
+            </div>
+          </tab>
+          <tab>
+            <ng-template tabHeading><i class="icon-eye"></i> Subscriptions</ng-template>
+            <div *ngIf="!selectedEntity">
+              No entity selected
+            </div>
+            <div *ngIf="selectedEntity">
+              Subscriptions of {{selectedEntity.id}}
+            </div>
+          </tab>
+        </tabset>
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.col-->
   </div>
+  <!--/.row-->
+</div>
 
-  <div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Create New Entity</h4>
-          <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
+<div bsModal #createNewEntityModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Create New Entity</h4>
+        <button type="button" class="close" (click)="createNewEntityModal.hide()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-5">
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="entityId">Entity ID</label>
-                    <input type="text" class="form-control" id="entityId" placeholder="Ex: LDR001">
-                  </div>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="entityId">Entity ID</label>
+                  <input type="text" class="form-control" id="entityId" placeholder="Ex: LDR001">
                 </div>
-              </div><!--/.row-->
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="entityType">Entity Type</label>
-                    <input type="text" class="form-control" id="entityType" placeholder="Ex: LDR">
-                  </div>
+              </div>
+            </div>
+            <!--/.row-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="entityType">Entity Type</label>
+                  <input type="text" class="form-control" id="entityType" placeholder="Ex: LDR">
                 </div>
-              </div><!--/.row-->
-            </div><!--/.col-->
-            <div class="col-sm-7">
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="entitySchema">Entity Schema</label>
-                    <textarea id="entitySchema" name="entitySchema" rows="9" class="form-control" placeholder="Select or type an entity schema JSON..."></textarea>
+              </div>
+            </div>
+            <!--/.row-->
+          </div>
+          <!--/.col-->
+          <div class="col-sm-7">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="entitySchema">Entity Schema</label>
+                  <textarea id="entitySchema" name="entitySchema" rows="9" class="form-control" placeholder="Select or type an entity schema JSON..."></textarea>
 
-                    <button type="button" class="btn btn-primary"><i class="fa fa-folder-open"></i></button>
-                    <button type="button" class="btn btn-outline-primary"><i class="fa fa-question"></i></button>
-                  </div>
+                  <button type="button" class="btn btn-primary"><i class="fa fa-folder-open"></i></button>
+                  <button type="button" class="btn btn-outline-primary"><i class="fa fa-question"></i></button>
                 </div>
-              </div><!--/.row-->
-            </div><!--/.col-->
-          </div><!--/.row-->
+              </div>
+            </div>
+            <!--/.row-->
+          </div>
+          <!--/.col-->
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="largeModal.hide()">Cancel</button>
-          <button type="button" class="btn btn-primary">Register Entity</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+        <!--/.row-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="createNewEntityModal.hide()">Cancel</button>
+        <button type="button" class="btn btn-primary">Register Entity</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
