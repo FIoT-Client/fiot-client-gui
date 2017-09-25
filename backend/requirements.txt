@@ -1,7 +1,7 @@
 certifi==2017.7.27.1
 chardet==3.0.4
 Django==1.11.5
--e git+https://projetos.imd.ufrn.br/FIoT-Client/fiot-client-python.git@3d6993dcb34b61e33ea2f2ed732a6129b6b0506d#egg=fiotclient
+django-cors-headers==2.1.0
 idna==2.6
 paho-mqtt==1.3.0
 pytz==2017.2

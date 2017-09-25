@@ -403,3 +403,1923 @@ Traceback (most recent call last):
   File "/Users/lucascriistiano/workspace/fiot-client-gui/backend/.env/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
     raise MultiValueDictKeyError(repr(key))
 django.utils.datastructures.MultiValueDictKeyError: "'service_name'"
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "STELAService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "",
+    "Fiware-ServicePath": ""
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "",
+    "Fiware-ServicePath": ""
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": ""
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": null
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": ""
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": ""
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Creating service
+DEBUG:root:Asking to http://localhost:4041/iot/services
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:root:Sending payload:
+DEBUG:root:{
+    "services": [
+        {
+            "protocol": [
+                "IoTA-UL"
+            ],
+            "apikey": "",
+            "token": "token2",
+            "cbroker": "http://localhost:1026",
+            "entity_type": "thing",
+            "resource": "/iot/d"
+        }
+    ]
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "POST /iot/services HTTP/1.1" 201 2
+DEBUG:root:Status Code: 201
+DEBUG:root:Response: 
+DEBUG:root:{}
+INFO:root:Creating service
+DEBUG:root:Asking to http://localhost:4041/iot/services
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:root:Sending payload:
+DEBUG:root:{
+    "services": [
+        {
+            "protocol": [
+                "IoTA-UL"
+            ],
+            "apikey": "246d9fa2a1a111e7844360f81db4b630",
+            "token": "token2",
+            "cbroker": "http://localhost:1026",
+            "entity_type": "thing",
+            "resource": "/iot/d"
+        }
+    ]
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "POST /iot/services HTTP/1.1" 201 2
+DEBUG:root:Status Code: 201
+DEBUG:root:Response: 
+DEBUG:root:{}
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 2
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[]
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Registering device
+DEBUG:root:Asking to http://localhost:4041/iot/devices?protocol=IoTA-UL
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:root:Sending payload:
+DEBUG:root:{
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "timezone": "America/Fortaleza",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "value": "STELA_DHT"
+                }
+            ]
+        }
+    ]
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "POST /iot/devices?protocol=IoTA-UL HTTP/1.1" 201 2
+DEBUG:root:Status Code: 201
+DEBUG:root:Response: 
+DEBUG:root:{}
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Getting entity by id 'LDR001'
+DEBUG:root:Asking to http://localhost:1026/v2/entities/LDR001/attrs?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities/LDR001/attrs?type=thing HTTP/1.1" 404 95
+DEBUG:root:Status Code: 404
+DEBUG:root:Response: 
+DEBUG:root:{
+    "error": "NotFound",
+    "description": "The requested entity has not been found. Check type and id"
+}
+INFO:root:Getting entity by id 'DHT001'
+DEBUG:root:Asking to http://localhost:1026/v2/entities/DHT001/attrs?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities/DHT001/attrs?type=thing HTTP/1.1" 200 171
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "TimeInstant": {
+        "type": "ISO8601",
+        "value": " ",
+        "metadata": {}
+    },
+    "humidity": {
+        "type": "float",
+        "value": " ",
+        "metadata": {}
+    },
+    "temperature": {
+        "type": "float",
+        "value": " ",
+        "metadata": {}
+    }
+}
+INFO:root:Getting entity by id 'DHT001'
+DEBUG:root:Asking to http://localhost:1026/v2/entities/DHT001/attrs?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities/DHT001/attrs?type=thing HTTP/1.1" 200 171
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "TimeInstant": {
+        "type": "ISO8601",
+        "value": " ",
+        "metadata": {}
+    },
+    "humidity": {
+        "type": "float",
+        "value": " ",
+        "metadata": {}
+    },
+    "temperature": {
+        "type": "float",
+        "value": " ",
+        "metadata": {}
+    }
+}
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Getting entities by type '<class 'type'>'
+DEBUG:root:Asking to http://localhost:1026/v2/entities?type=thing
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:1026 "GET /v2/entities?type=thing HTTP/1.1" 200 202
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:[
+    {
+        "id": "DHT001",
+        "type": "thing",
+        "TimeInstant": {
+            "type": "ISO8601",
+            "value": " ",
+            "metadata": {}
+        },
+        "humidity": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        },
+        "temperature": {
+            "type": "float",
+            "value": " ",
+            "metadata": {}
+        }
+    }
+]
+INFO:root:Listing devices
+DEBUG:root:Asking to http://localhost:4041/iot/devices
+DEBUG:root:Headers:
+DEBUG:root:{
+    "X-Auth-Token": "NULL",
+    "Fiware-Service": "StelaService",
+    "Fiware-ServicePath": "/stela",
+    "Content-Type": "application/json"
+}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:4041 "GET /iot/devices HTTP/1.1" 200 378
+DEBUG:root:Status Code: 200
+DEBUG:root:Response: 
+DEBUG:root:{
+    "count": 1,
+    "devices": [
+        {
+            "device_id": "STELA_DHT",
+            "service": "StelaService",
+            "service_path": "/stela",
+            "entity_name": "DHT001",
+            "entity_type": "thing",
+            "transport": "MQTT",
+            "attributes": [
+                {
+                    "object_id": "h",
+                    "name": "humidity",
+                    "type": "float"
+                },
+                {
+                    "object_id": "t",
+                    "name": "temperature",
+                    "type": "float"
+                }
+            ],
+            "lazy": [],
+            "commands": [],
+            "static_attributes": [
+                {
+                    "value": "STELA_DHT",
+                    "type": "string",
+                    "name": "id"
+                }
+            ]
+        }
+    ]
+}
