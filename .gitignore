@@ -20,3 +20,5 @@ tests/report/
 .DS_Store
 .idea/
 .env/
+
+fiotclient.log

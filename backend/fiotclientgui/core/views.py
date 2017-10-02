@@ -156,18 +156,15 @@ def devices_view(request):
         client = load_iot_parameters(request, client_iot)
         request_body = json.loads(request.body)
 
-        device_schema = request_body.get("device_schema")
         device_id = request_body.get("device_id")
         entity_id = request_body.get("entity_id")
-        device_ip = request_body.get("device_ip", "")
-        device_port = request_body.get("device_port", "")
-        protocol = request_body.get("protocol")
+        endpoint = request_body.get("endpoint", "")
+        protocol = request_body.get("protocol", "")
+        device_schema = request_body.get("device_schema")
 
         kwargs = {}
-        if device_ip:
-            kwargs['device_ip'] = device_ip
-        if device_port:
-            kwargs['device_port'] = device_port
+        if endpoint:
+            kwargs['endpoint '] = endpoint
         if protocol:
             kwargs['protocol'] = protocol
 

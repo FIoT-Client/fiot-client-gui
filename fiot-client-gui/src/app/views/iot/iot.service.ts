@@ -6,9 +6,9 @@ import 'rxjs/add/operator/toPromise';
 export class IotService {
 
   private baseUrl = 'http://localhost:8000/devices';
-  private serviceName = 'StelaService';
+  private serviceName = 'STELAService';
   private servicePath = '/stela';
-  private apiKey = '246d9fa2a1a111e7844360f81db4b630';
+  private apiKey = '7e7ccd86a71811e7be9360f81db4b630';
 
   constructor(private http: Http) { }
 
@@ -19,6 +19,23 @@ export class IotService {
       .then(data => data['response'])
       .then(data => data['devices'])
       .catch(() => []);
+  }
+
+  public registerDevice(deviceId: string, entityId: string, endpoint: string, protocol: string, deviceSchema: string) {
+    const body = {
+      'device_id': deviceId,
+      'entity_id': entityId,
+      'endpoint': endpoint,
+      'protocol': protocol,
+      'device_schema': deviceSchema
+    };
+
+    return this.http.post(`${this.baseUrl}/?service_name=${this.serviceName}&service_path=${this.servicePath}&api_key=${this.apiKey}`, body)
+      .toPromise()
+      .then(data => data.json())
+      .catch(() => {
+        return {'status_code': 500};
+      });
   }
 
 }

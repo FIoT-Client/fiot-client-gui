@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -13,6 +14,8 @@ import { IotService } from './iot.service';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     IotRoutingModule,
     ChartsModule,
@@ -20,7 +23,9 @@ import { IotService } from './iot.service';
     TabsModule,
     ModalModule.forRoot()
   ],
-  declarations: [ IotComponent ],
+  declarations: [
+    IotComponent
+  ],
   providers: [
     IotService
   ]

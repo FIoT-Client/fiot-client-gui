@@ -7,14 +7,15 @@
           <small>IDs</small>
         </div>
         <div class="card-body">
-          <div *ngIf="entities">
-            <div class="table-responsive">
-              <table class="table table-bordered table-striped">
-                <tr *ngFor="let entity of entities" (click)="selectEntity(entity)">
-                  <td>{{entity.id}}</td>
-                </tr>
-              </table>
-            </div>
+          <div class="table-responsive" *ngIf="entities?.length > 0">
+            <table class="table table-bordered table-striped">
+              <tr *ngFor="let entity of entities" (click)="selectEntity(entity)">
+                <td>{{entity.id}}</td>
+              </tr>
+            </table>
+          </div>
+          <div *ngIf="!(entities?.length > 0)" style="text-align: center;">
+            No registered entities
           </div>
         </div>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="createNewEntityModal.show()">

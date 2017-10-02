@@ -7,19 +7,20 @@
           <small>IDs</small>
         </div>
         <div class="card-body">
-          <div *ngIf="devices">
-            <div class="table-responsive">
-              <table class="table table-bordered table-striped">
-                <tr *ngFor="let device of devices" (click)="selectDevice(device)">
-                  <td>{{device.device_id}}</td>
-                </tr>
-              </table>
-            </div>
+          <div class="table-responsive" *ngIf="devices?.length > 0">
+            <table class="table table-bordered table-striped">
+              <tr *ngFor="let device of devices" (click)="selectDevice(device)">
+                <td>{{device.device_id}}</td>
+              </tr>
+            </table>
+          </div>
+          <div *ngIf="!(devices?.length > 0)" style="text-align: center;">
+            No registered devices
           </div>
         </div>
-        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="createNewEntityModal.show()">
-            Register New Device
-          </button>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="registerNewDeviceModal.show()">
+          Register New Device
+        </button>
       </div>
     </div>
     <!--/.col-->
@@ -54,15 +55,15 @@
   <!--/.row-->
 </div>
 
-<div bsModal #createNewEntityModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+<div bsModal #registerNewDeviceModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="registerDeviceLabel" aria-hidden="true">
+  {{ bindModal(registerNewDeviceModal) }}
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Create New Entity</h4>
-        <button type="button" class="close" (click)="createNewEntityModal.hide()" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+        <h4 class="modal-title">Register New Device</h4>
+        <button type="button" class="close" (click)="registerNewDeviceModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -70,8 +71,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label for="entityId">Entity ID</label>
-                  <input type="text" class="form-control" id="entityId" placeholder="Ex: LDR001">
+                  <label for="deviceId">Device ID</label>
+                  <input type="text" class="form-control" id="deviceId" [(ngModel)]="deviceId" placeholder="Ex: STELA_LDR_001">
                 </div>
               </div>
             </div>
@@ -79,8 +80,26 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label for="entityType">Entity Type</label>
-                  <input type="text" class="form-control" id="entityType" placeholder="Ex: LDR">
+                  <label for="entityId">Entity Id</label>
+                  <input type="text" class="form-control" id="entityId" [(ngModel)]="entityId" placeholder="Ex: LDR001">
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="deviceEndpoint">Device Endpoint (opt.)</label>
+                  <input type="text" class="form-control" id="deviceEndpoint" [(ngModel)]="endpoint" placeholder="Ex: 10.7.12.101:1234">
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="deviceProtocol">Protocol (opt.)</label>
+                  <input type="text" class="form-control" id="deviceProtocol" [(ngModel)]="protocol" placeholder="Default: IoTA-UL">
                 </div>
               </div>
             </div>
@@ -91,8 +110,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label for="entitySchema">Entity Schema</label>
-                  <textarea id="entitySchema" name="entitySchema" rows="9" class="form-control" placeholder="Select or type an entity schema JSON..."></textarea>
+                  <label for="deviceSchema">Device Schema</label>
+                  <textarea id="deviceSchema" name="deviceSchema" rows="15" class="form-control" [(ngModel)]="deviceSchema" placeholder="Select or type an device schema JSON..."></textarea>
 
                   <button type="button" class="btn btn-primary"><i class="fa fa-folder-open"></i></button>
                   <button type="button" class="btn btn-outline-primary"><i class="fa fa-question"></i></button>
@@ -106,8 +125,8 @@
         <!--/.row-->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click)="createNewEntityModal.hide()">Cancel</button>
-        <button type="button" class="btn btn-primary">Register Entity</button>
+        <button type="button" class="btn btn-secondary" (click)="registerNewDeviceModal.hide()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="registerDevice()">Register Device</button>
       </div>
     </div>
     <!-- /.modal-content -->
