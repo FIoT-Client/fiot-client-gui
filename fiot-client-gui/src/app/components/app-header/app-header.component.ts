@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../../views/service/service.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './app-header.component.html'
 })
-export class AppHeader {
+export class AppHeader implements OnInit {
 
   // public disabled = false;
   // public status: {isopen: boolean} = {isopen: false};
@@ -23,6 +23,6 @@ export class AppHeader {
   constructor(public serviceService: ServiceService) { }
 
   ngOnInit(): void {
-
+    console.log(this.serviceService.selectedService);
   }
 }

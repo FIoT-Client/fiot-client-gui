@@ -36,7 +36,14 @@ def load_iot_parameters(request, iot_client):
 @csrf_exempt
 def services_view(request):
     if request.method == 'GET':  # Retrieves all services allowed to logged user
-        return HttpResponse("services GET")
+        services = [
+            {'serviceName': 'UFRNService', 'servicePath': '/ufrn'},
+            {'serviceName': 'DIMAPService', 'servicePath': '/ufrn/dimap'},
+            {'serviceName': 'IMDService', 'servicePath': '/ufrn/imd'},
+            {'serviceName': 'StelaService', 'servicePath': '/ufrn/imd/stela'}
+        ]
+
+        return HttpResponse(json.dumps({"status_code": 200, "response": services}), content_type='application/json')
 
     elif request.method == 'POST':  # Creates a new service
         request_body = json.loads(request.body)

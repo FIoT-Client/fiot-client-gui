@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { NewServiceComponent } from './newservice/newservice.component';
-import { SelectServiceComponent } from './selectservice/selectservice.component';
+import { NewServiceComponent } from './newservice.component';
+import { SelectServiceComponent } from './selectservice.component';
 import { ServiceRoutingModule } from './service-routing.module';
 import { ServiceService } from './service.service';
 
 @NgModule({
   imports: [
-    ServiceRoutingModule,
     CommonModule,
+    HttpModule,
+    ServiceRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpModule
+    ReactiveFormsModule
   ],
   declarations: [
     NewServiceComponent,

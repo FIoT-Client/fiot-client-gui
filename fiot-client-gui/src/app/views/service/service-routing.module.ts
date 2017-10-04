@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NewServiceComponent } from './newservice/newservice.component';
-import { SelectServiceComponent } from './selectservice/selectservice.component';
+import { NewServiceComponent } from './newservice.component';
+import { SelectServiceComponent } from './selectservice.component';
 
 const routes: Routes = [
   {

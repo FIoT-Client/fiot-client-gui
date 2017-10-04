@@ -5,8 +5,15 @@
   <ul class="nav navbar-nav ml-auto">
     <li class="nav-item dropdown" dropdown (onToggle)="toggled($event)">
       <a href class="nav-link dropdown-toggle" dropdownToggle (click)="false">
-        <span class="d-md-down-none">
-          lucascriistiano - {{serviceService.selectedService != {} ? (serviceService.selectedService.serviceName '-' serviceService.selectedService.servicePath) : 'No selected service'}
+        <span class="d-md-down-none" >
+          lucascriistiano 
+          - 
+          <span *ngIf="serviceService.selectedService != null">
+            {{serviceService.selectedService.serviceName}} - {{serviceService.selectedService.servicePath}}
+          </span>
+          <span *ngIf="serviceService.selectedService == null">
+            No selected service
+          </span>
         </span>
         <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
       </a>
