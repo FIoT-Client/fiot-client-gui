@@ -55,6 +55,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { LoginModule } from './login/login.module';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
+import { ServiceService } from './views/service/service.service';
 
 @NgModule({
   imports: [
@@ -73,7 +74,7 @@ import { AuthService } from './auth.service';
     ...APP_COMPONENTS,
     ...APP_DIRECTIVES
   ],
-  providers: [ AuthGuard, AuthService ],
+  providers: [ AuthGuard, AuthService, ServiceService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

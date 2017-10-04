@@ -16,6 +16,25 @@ export const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'service',
+    component: FullLayout,
+    data: {
+      title: 'Service'
+    },
+    canActivate:  [
+      AuthGuard
+    ],
+    canLoad: [
+      AuthGuard
+    ],
+    children: [
+      {
+        path: '',
+        loadChildren: './views/service/service.module#ServiceModule',
+      }
+    ]
+  },
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

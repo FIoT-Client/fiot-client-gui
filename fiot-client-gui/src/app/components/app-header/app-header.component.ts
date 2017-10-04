@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from '../../views/service/service.service';
 
 @Component({
   selector: 'app-header',
@@ -19,5 +20,9 @@ export class AppHeader {
   //   this.status.isopen = !this.status.isopen;
   // }
 
-  ngOnInit(): void {}
+  constructor(public serviceService: ServiceService) { }
+
+  ngOnInit(): void {
+
+  }
 }
