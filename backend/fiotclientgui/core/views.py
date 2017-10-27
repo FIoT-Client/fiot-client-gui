@@ -37,10 +37,10 @@ def load_iot_parameters(request, iot_client):
 def services_view(request):
     if request.method == 'GET':  # Retrieves all services allowed to logged user
         services = [
-            {'serviceName': 'UFRNService', 'servicePath': '/ufrn'},
-            {'serviceName': 'DIMAPService', 'servicePath': '/ufrn/dimap'},
-            {'serviceName': 'IMDService', 'servicePath': '/ufrn/imd'},
-            {'serviceName': 'StelaService', 'servicePath': '/ufrn/imd/stela'}
+            {'serviceName': 'STELAService', 'servicePath': '/ufrn/imd/stela', 'apiKey': 'e7de7b88bad211e7a45d7200077c2c20'},
+            {'serviceName': 'UFRNService', 'servicePath': '/ufrn', 'apiKey': '1111111111'},
+            {'serviceName': 'DIMAPService', 'servicePath': '/ufrn/dimap', 'apiKey': '2222222222'},
+            {'serviceName': 'IMDService', 'servicePath': '/ufrn/imd', 'apiKey': '3333333333'}
         ]
 
         return HttpResponse(json.dumps({"status_code": 200, "response": services}), content_type='application/json')

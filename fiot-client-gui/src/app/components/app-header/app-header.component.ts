@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 import { ServiceService } from '../../views/service/service.service';
+import { Service } from '../../domain/service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './app-header.component.html'
 })
-export class AppHeader implements OnInit {
+export class AppHeader implements OnInit, OnDestroy {
 
   // public disabled = false;
   // public status: {isopen: boolean} = {isopen: false};
@@ -20,9 +22,18 @@ export class AppHeader implements OnInit {
   //   this.status.isopen = !this.status.isopen;
   // }
 
-  constructor(public serviceService: ServiceService) { }
+  selectedService: Service;
+  subscription: Subscription;
 
-  ngOnInit(): void {
-    console.log(this.serviceService.selectedService);
+  constructor(private serviceService: ServiceService) { }
+
+  ngOnInit() {
+    this.subscription = this.serviceService.serviceObservable
+                            .subscribe(selectedService => this.selectedService = selectedService);
   }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
 }

@@ -1,19 +1,30 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/toPromise';
+import { ServiceService } from '../service/service.service';
+import { Service } from '../../domain/service';
 
 @Injectable()
 export class IotService {
 
   private baseUrl = 'http://localhost:8000/devices';
-  private serviceName = 'STELAService';
-  private servicePath = '/stela';
-  private apiKey = '7e7ccd86a71811e7be9360f81db4b630';
 
-  constructor(private http: Http) { }
+  selectedService: Service;
+  subscription: Subscription;
+
+  constructor(private http: Http, private serviceService: ServiceService) {
+    this.serviceService.serviceObservable
+        .subscribe(selectedService => {
+          this.selectedService = selectedService;
+          console.log('IotService ' + selectedService);
+        });
+  }
 
   public getDevices(): Promise<any> {
-    return this.http.get(`${this.baseUrl}/?service_name=${this.serviceName}&service_path=${this.servicePath}&api_key=${this.apiKey}`)
+    return this.http.get(`${this.baseUrl}/?service_name=${this.selectedService.serviceName}`
+                         + `&service_path=${this.selectedService.servicePath}`
+                         + `&api_key=${this.selectedService.apiKey}`)
       .toPromise()
       .then(data => data.json())
       .then(data => data['response'])
@@ -30,7 +41,9 @@ export class IotService {
       'device_schema': deviceSchema
     };
 
-    return this.http.post(`${this.baseUrl}/?service_name=${this.serviceName}&service_path=${this.servicePath}&api_key=${this.apiKey}`, body)
+    return this.http.post(`${this.baseUrl}/?service_name=${this.selectedService.serviceName}`
+                          + `&service_path=${this.selectedService.servicePath}`
+                          + `&api_key=${this.selectedService.apiKey}`, body)
       .toPromise()
       .then(data => data.json())
       .catch(() => {

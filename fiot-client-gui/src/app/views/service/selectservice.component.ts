@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from './service.service';
+import { Router } from '@angular/router';
+import { Service } from '../../domain/service';
 
 @Component({
   selector: 'app-selectservice',
@@ -7,10 +9,10 @@ import { ServiceService } from './service.service';
 })
 export class SelectServiceComponent implements OnInit {
 
-  public services;
+  public services: Service[];
   public selectedService = null;
 
-  constructor(public serviceService: ServiceService) { }
+  constructor(private router: Router, private serviceService: ServiceService) { }
 
   ngOnInit() {
     this.serviceService.listServices()
@@ -22,10 +24,11 @@ export class SelectServiceComponent implements OnInit {
 
   selectService() {
     if (this.selectedService != null) {
-      console.log('Old: ', this.serviceService.selectedService);
-      this.serviceService.selectService(this.selectedService.serviceName, this.selectedService.servicePath);
+      this.serviceService.selectService(this.selectedService);
+      this.router.navigate(['/dashboard']);
     } else {
       // TODO Show message that service is mandatory
+      console.log('selectedService is null');
     }
   }
 

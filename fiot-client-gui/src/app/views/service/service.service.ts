@@ -1,26 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
+import { Service } from '../../domain/service';
+
 
 @Injectable()
 export class ServiceService {
 
   private baseUrl = 'http://localhost:8000/services';
 
-  public selectedService = null;
-  // public selectedService = {
-  //   'serviceName': 'StelaService',
-  //   'servicePath': '/ufrn/imd/stela'
-  // };
+  private serviceSubject = new BehaviorSubject<Service>(null);
+  serviceObservable: Observable<Service> = this.serviceSubject.asObservable();
 
   constructor(private http: Http) { }
 
-  public selectService(serviceName: string, servicePath: string) {
-    this.selectedService = {
-      'serviceName': serviceName,
-      'servicePath': servicePath
-    };
-    console.log('New: ', this.selectedService);
+  public selectService(service: Service) {
+    this.serviceSubject.next(service);
   }
 
   public listServices() {

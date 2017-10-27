@@ -18,9 +18,6 @@ import { ServiceService } from './service.service';
   declarations: [
     NewServiceComponent,
     SelectServiceComponent
-  ],
-  providers: [
-    ServiceService
   ]
 })
 export class ServiceModule { }

@@ -19,10 +19,12 @@ export class IotComponent implements OnInit {
   public protocol = '';
   public deviceSchema = '';
 
-  constructor(private iotService: IotService) { }
+  constructor(public iotService: IotService) { }
 
-  ngOnInit(): void {
-    this.getDevices();
+  ngOnInit() {
+    if (this.iotService.selectedService) {
+      this.getDevices();
+    }
   }
 
   bindModal(registerNewDeviceModal) {
