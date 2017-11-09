@@ -18,7 +18,6 @@ export class SelectServiceComponent implements OnInit {
     this.serviceService.listServices()
       .then(serviceList => {
         this.services = serviceList;
-        console.log(this.services);
       });
   }
 

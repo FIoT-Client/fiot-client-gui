@@ -8,6 +8,8 @@ import { IotService } from './iot.service';
 })
 export class IotComponent implements OnInit {
 
+  fileReader: FileReader = new FileReader();
+
   public registerNewDeviceModal;
 
   public devices = [];
@@ -19,7 +21,18 @@ export class IotComponent implements OnInit {
   public protocol = '';
   public deviceSchema = '';
 
-  constructor(public iotService: IotService) { }
+  constructor(public iotService: IotService) {
+    this.fileReader.onload = file => {
+      const contents: any = file.target;
+      const result = contents.result;
+      if (result) {
+        this.deviceSchema = result;
+      } else {
+        // TODO Empty file doesn't change content
+        console.log('Read empty file');
+      }
+    };
+  }
 
   ngOnInit() {
     if (this.iotService.selectedService) {
@@ -31,10 +44,17 @@ export class IotComponent implements OnInit {
     this.registerNewDeviceModal = registerNewDeviceModal;
   }
 
+  fileChange(event) {
+    const fileList: FileList = event.target.files;
+    if (fileList.length > 0) {
+      const file: File = fileList[0];
+      this.fileReader.readAsText(file);
+    }
+  }
+
   getDevices() {
     this.iotService.getDevices()
       .then(devices => {
-        console.log(devices);
         this.devices = devices;
       });
   }

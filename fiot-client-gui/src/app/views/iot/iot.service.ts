@@ -17,7 +17,6 @@ export class IotService {
     this.serviceService.serviceObservable
         .subscribe(selectedService => {
           this.selectedService = selectedService;
-          console.log('IotService ' + selectedService);
         });
   }
 
