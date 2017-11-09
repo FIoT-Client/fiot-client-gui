@@ -10,7 +10,7 @@
               <div class="col-sm-12">
                 <div class="form-group">
                   <label for="serviceName">Service Name</label>
-                  <input type="text" class="form-control" id="serviceName" [(ngModel)]="serviceName" placeholder="Ex: UFRNService">
+                  <input type="text" class="form-control" id="serviceName" [(ngModel)]="service.serviceName" placeholder="Ex: UFRNService">
                 </div>
               </div>
             </div>
@@ -19,7 +19,7 @@
               <div class="col-sm-12">
                 <div class="form-group">
                   <label for="servicePath">Service Path</label>
-                  <input type="text" class="form-control" id="servicePath" [(ngModel)]="servicePath" placeholder="Ex: /ufrn">
+                  <input type="text" class="form-control" id="servicePath" [(ngModel)]="service.servicePath" placeholder="Ex: /ufrn">
                 </div>
               </div>
             </div>
@@ -28,14 +28,14 @@
               <div class="col-sm-12">
                 <div class="form-group">
                   <label for="apiKey">API Key (opt.)</label>
-                  <input type="text" class="form-control" id="apiKey" [(ngModel)]="apiKey" placeholder="Ex: a12af162adfe84">
+                  <input type="text" class="form-control" id="apiKey" [(ngModel)]="service.apiKey" placeholder="Ex: a12af162adfe84">
                 </div>
               </div>
             </div>
             <!--/.row-->
 
-            <button type="button" class="btn btn-block btn-primary">Create Service</button>
-            <button type="button" class="btn btn-block btn-secondary">Back</button>
+            <button type="button" class="btn btn-block btn-primary" (click)="createService()">Create Service</button>
+            <button type="button" class="btn btn-block btn-secondary" [routerLink]="['/service/select']">Back</button>
           </div>
         </div>
       </div>

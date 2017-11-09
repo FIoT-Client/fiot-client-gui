@@ -1,5 +1,13 @@
 export class Service {
-    serviceName: string = '';
-    servicePath: string = '';
-    apiKey: string = '';
+  serviceName = '';
+  servicePath = '';
+  apiKey = '';
+
+  toServerJSON() {
+    return {
+      'service_name': this.serviceName,
+      'service_path': this.servicePath,
+      'api_key': this.apiKey
+    };
+  }
 }

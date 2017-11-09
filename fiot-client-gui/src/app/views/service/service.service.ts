@@ -20,8 +20,18 @@ export class ServiceService {
     this.serviceSubject.next(service);
   }
 
+  public createService(service: Service) {
+    const body = service.toServerJSON();
+    return this.http.post(`${this.baseUrl}/`, body)
+      .toPromise()
+      .then(data => data.json())
+      .catch(() => {
+        return {'status_code': 500};
+      });
+  }
+
   public listServices() {
-    return this.http.get(`${this.baseUrl}`)
+    return this.http.get(`${this.baseUrl}/`)
       .toPromise()
       .then(data => data.json())
       .then(data => data['response'])
