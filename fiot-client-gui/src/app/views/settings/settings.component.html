@@ -1,0 +1,36 @@
+<!-- <div class="app flex-row align-items-center"> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h4>Settings</h4>
+            <!-- Nav tabs -->
+            <tabset>
+              <tab>
+                <ng-template tabHeading>IoT</ng-template>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <textarea id="settings" name="settings" rows="15" class="form-control" [(ngModel)]="settingsStr" readonly></textarea>
+                  </div>
+                </div> <!--/.col-->
+              </tab>
+              <tab>
+                <ng-template tabHeading>Context</ng-template>
+
+              </tab>
+              <tab>
+                <ng-template tabHeading>Service</ng-template>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <textarea id="selectedService" name="selectedService" rows="15" class="form-control" [(ngModel)]="selectedServiceStr" readonly></textarea>
+                  </div>
+                </div> <!--/.col-->
+              </tab>
+            </tabset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->

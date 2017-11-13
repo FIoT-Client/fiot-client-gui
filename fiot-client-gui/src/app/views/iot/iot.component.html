@@ -12,16 +12,19 @@
           <strong>Devices</strong>
           <small>IDs</small>
         </div>
-        <div class="card-body">
-          <div class="table-responsive" *ngIf="devices?.length > 0">
-            <table class="table table-bordered table-striped">
-              <tr *ngFor="let device of devices" (click)="selectDevice(device)">
-                <td>{{device.device_id}}</td>
-              </tr>
-            </table>
+        <div class="card-body" style="padding: 0;">
+          <div *ngIf="devices?.length > 0">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-action"
+                [ngClass]="{'list-group-item-info': selectedDevice != null && device == selectedDevice}"
+                *ngFor="let device of devices"
+                (click)="selectDevice(device)">
+                {{device.device_id}}
+              </li>
+            </ul>
           </div>
           <div *ngIf="!(devices?.length > 0)" style="text-align: center;">
-            No registered devices
+            <p class="lead">No registered devices</p>
           </div>
         </div>
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="registerNewDeviceModal.show()">
@@ -40,16 +43,49 @@
               No device selected
             </div>
             <div *ngIf="selectedDevice">
-              Info of {{selectedDevice.device_id}}
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="selectedDeviceSchema">Device Schema</label>
+                    <textarea id="selectedDeviceSchema" name="selectedDeviceSchema" rows="15" class="form-control" [(ngModel)]="selectedDeviceSchema" readonly></textarea>
+                  </div>
+                </div> <!--/.col-->
+              </div> <!--/.row-->
             </div>
           </tab>
           <tab>
-            <ng-template tabHeading><i class="icon-eye"></i> Subscriptions</ng-template>
+            <ng-template tabHeading><i class="icon-paper-plane"></i> Send Measurements</ng-template>
             <div *ngIf="!selectedDevice">
               No device selected
             </div>
             <div *ngIf="selectedDevice">
-              Subscriptions of {{selectedDevice.device_id}}
+              <div *ngIf="selectedDevice.attributes.length == 0">
+                No attributes registered for the device
+              </div>
+              <div *ngIf="selectedDevice.attributes.length > 0">
+                Attributes to send measurements for device {{selectedDevice.device_id}}
+
+
+
+              </div>
+            </div>
+          </tab>
+          <tab>
+            <ng-template tabHeading><i class="icon-energy"></i> Send Commands</ng-template>
+            <div *ngIf="!selectedDevice">
+              No device selected
+            </div>
+            <div *ngIf="selectedDevice">
+              <div *ngIf="selectedDevice.commands.length == 0">
+                No commands registered for the device
+              </div>
+              <div *ngIf="selectedDevice.commands.length > 0">
+                Commands for the device {{selectedDevice.device_id}}
+
+
+
+
+              </div>
             </div>
           </tab>
         </tabset>

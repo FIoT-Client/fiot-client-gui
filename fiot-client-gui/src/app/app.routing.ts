@@ -35,6 +35,22 @@ export const routes: Routes = [
     ]
   },
   {
+    path: 'settings',
+    component: FullLayout,
+    canActivate:  [
+      AuthGuard
+    ],
+    canLoad: [
+      AuthGuard
+    ],
+    children: [
+      {
+        path: '',
+        loadChildren: './views/settings/settings.module#SettingsModule',
+      }
+    ]
+  },
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

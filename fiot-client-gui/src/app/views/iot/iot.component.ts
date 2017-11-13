@@ -14,6 +14,7 @@ export class IotComponent implements OnInit {
 
   public devices = [];
   public selectedDevice = null;
+  public selectedDeviceSchema = '';
 
   public deviceId = '';
   public entityId = '';
@@ -61,6 +62,7 @@ export class IotComponent implements OnInit {
 
   selectDevice(device) {
     this.selectedDevice = device;
+    this.selectedDeviceSchema = JSON.stringify(this.selectedDevice, null, 4); // spacing level = 4
   }
 
   registerDevice() {
