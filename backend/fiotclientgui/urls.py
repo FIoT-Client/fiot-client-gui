@@ -29,4 +29,6 @@ urlpatterns = [
 
     url(r'^devices/$', views.devices_view),
     url(r'^devices/(?P<device_id>[\w\d]+)/$', views.device_view),
+
+    url(r'^settings/$', views.settings_view),
 ]

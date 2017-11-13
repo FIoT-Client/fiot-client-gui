@@ -15,6 +15,8 @@ CONFIG_FILE_PATH = os.path.join(settings.BASE_DIR, 'config.ini')
 client_iot = iot.FiwareIotClient(CONFIG_FILE_PATH)
 client_context = context.FiwareContextClient(CONFIG_FILE_PATH)
 
+service_list = []
+
 
 def load_context_parameters(request, context_client):
     service_name = request.GET.get("service_name", "")
@@ -36,14 +38,15 @@ def load_iot_parameters(request, iot_client):
 @csrf_exempt
 def services_view(request):
     if request.method == 'GET':  # Retrieves all services allowed to logged user
-        services = [
-            {'serviceName': 'STELAService', 'servicePath': '/ufrn/imd/stela', 'apiKey': 'e7de7b88bad211e7a45d7200077c2c20'},
-            {'serviceName': 'UFRNService', 'servicePath': '/ufrn', 'apiKey': '1111111111'},
-            {'serviceName': 'DIMAPService', 'servicePath': '/ufrn/dimap', 'apiKey': '2222222222'},
-            {'serviceName': 'IMDService', 'servicePath': '/ufrn/imd', 'apiKey': '3333333333'}
-        ]
+        # services = [
+        #     {'serviceName': 'Teste', 'servicePath': '/teste', 'apiKey': ''},
+        #     {'serviceName': 'STELAService', 'servicePath': '/ufrn/imd/stela', 'apiKey': 'e7de7b88bad211e7a45d7200077c2c20'},
+        #     {'serviceName': 'UFRNService', 'servicePath': '/ufrn', 'apiKey': '1111111111'},
+        #     {'serviceName': 'DIMAPService', 'servicePath': '/ufrn/dimap', 'apiKey': '2222222222'},
+        #     {'serviceName': 'IMDService', 'servicePath': '/ufrn/imd', 'apiKey': '3333333333'}
+        # ]
 
-        return HttpResponse(json.dumps({"status_code": 200, "response": services}), content_type='application/json')
+        return HttpResponse(json.dumps({"status_code": 200, "response": service_list}), content_type='application/json')
 
     elif request.method == 'POST':  # Creates a new service
         request_body = json.loads(request.body)
@@ -53,6 +56,13 @@ def services_view(request):
         api_key = request_body.get("api_key", "")
 
         response = client_iot.create_service(service_name, service_path, api_key=api_key)
+
+        if response['status_code'] == 201:
+            service_list.append({
+                'serviceName': service_name,
+                'servicePath': service_path,
+                'apiKey': response['api_key']
+            })
 
         return HttpResponse(json.dumps(response), content_type='application/json')
 
@@ -199,6 +209,60 @@ def device_view(request, device_id):
         client = load_iot_parameters(request, client_iot)
         # TODO Implement on FIoT-Client-Python
         return HttpResponse("device " + device_id + " DELETE")
+
+    else:
+        raise Http404("Unsupported method")
+
+
+@csrf_exempt
+def settings_view(request):
+    if request.method == 'GET':  # Retrieves settings of the deploy
+        instance_settings = {
+            # IoT
+            'idas': {
+                'host': client_iot.idas_host,
+                'admin_port': client_iot.idas_admin_port,
+                'ul20_port': client_iot.idas_ul20_port,
+                'api_key': client_iot.api_key
+            },
+            'mosquitto': {
+                'host': client_iot.mosquitto_host,
+                'port': client_iot.mosquitto_port
+            },
+            # Context
+            'sth': {
+                'host': client_context.sth_host,
+                'port': client_context.sth_port
+            },
+            'cygnus': {
+                'host': client_context.cygnus_host,
+                'port': client_context.cygnus_port,
+                'notification_host': client_context.cygnus_notification_host,
+                'agents': [
+                    {
+                        'name': 'mysql',
+                        'host': 'MYSQL_HOST',
+                        'port': 'MYSQL_PORT'
+                    },
+                    {
+                        'name': 'mongodb',
+                        'host': 'MONGODB_HOST',
+                        'port': 'MONGODB_PORT'
+                    },
+                    {
+                        'name': 'elasticsearch',
+                        'host': 'ELK_HOST',
+                        'port': 'ELK_PORT'
+                    }
+                ]
+            },
+            'perseo': {
+                'host': client_context.perseo_host,
+                'port': client_context.perseo_port
+            }
+        }
+
+        return HttpResponse(json.dumps({"status_code": 200, "response": instance_settings}), content_type='application/json')
 
     else:
         raise Http404("Unsupported method")
