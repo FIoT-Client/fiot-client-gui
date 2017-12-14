@@ -1,0 +1,21 @@
+version: "2"
+services:
+  backend:
+    image: fiot-client-gui/backend
+    hostname: fiot-client-gui-backend
+    container_name: fiot-client-gui-backend
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: fiot-client-gui/frontend
+    hostname: fiot-client-gui-frontend
+    container_name: fiot-client-gui-frontend
+    expose:
+      - "80"
+    ports:
+      - "80:80"
+    links:
+      - backend
