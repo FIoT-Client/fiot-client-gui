@@ -11,8 +11,8 @@
                 <div class="form-group">
                   <label for="selectedService">Service Name</label>
                   <select id="selectedService" name="selectedService" class="form-control" [(ngModel)]="selectedService">
-                    <option disabled="disabled" [selected]="serviceService.selectedService == null">---- Select a service ----</option>
-                    <option *ngFor="let s of services" [ngValue]="s" [selected]="serviceService.selectedService != null && serviceService.selectedService.serviceName === s.serviceName">{{s.serviceName}} - {{s.servicePath}}</option>
+                    <option disabled="disabled" [selected]="!hasServiceSelected()">---- Select a service ----</option>
+                    <option *ngFor="let s of services" [ngValue]="s" [selected]="hasServiceSelected() && isCurrentlySelectedService()">{{s.serviceName}} - {{s.servicePath}}</option>
                   </select>
                 </div>
               </div>

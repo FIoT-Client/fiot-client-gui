@@ -31,4 +31,12 @@ export class SelectServiceComponent implements OnInit {
     }
   }
 
+  hasServiceSelected(): boolean {
+    return this.selectedService != null;
+  }
+
+  isCurrentlySelectedService(serviceName: string) {
+    return this.selectedService.serviceName === serviceName;
+  }
+
 }
