@@ -1,0 +1,32 @@
+<div class="flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card mx-4">
+          <div class="card-body p-4">
+            <h2>Select Service</h2>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="selectedService">Service Name</label>
+                  <select id="selectedService" name="selectedService" class="form-control" [(ngModel)]="selectedService">
+                    <option disabled="disabled" [selected]="!hasServiceSelected()">---- Select a service ----</option>
+                    <option *ngFor="let s of services" [ngValue]="s" [selected]="hasServiceSelected() && isCurrentlySelectedService()">{{s.serviceName}} - {{s.servicePath}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+
+            <button type="button" class="btn btn-block btn-primary" (click)="selectService()">Select Service</button>
+            <div class="row justify-content-center">
+            or
+            </div>
+            <button type="button" class="btn btn-block btn-primary" [routerLink]="['/service/new']">Create a New Service</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

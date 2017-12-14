@@ -1,0 +1,44 @@
+<!-- <div class="app flex-row align-items-center"> -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mx-4">
+          <div class="card-body p-4">
+            <h2>Create New Service</h2>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="serviceName">Service Name</label>
+                  <input type="text" class="form-control" id="serviceName" [(ngModel)]="service.serviceName" placeholder="Ex: UFRNService">
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="servicePath">Service Path</label>
+                  <input type="text" class="form-control" id="servicePath" [(ngModel)]="service.servicePath" placeholder="Ex: /ufrn">
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="apiKey">API Key (opt.)</label>
+                  <input type="text" class="form-control" id="apiKey" [(ngModel)]="service.apiKey" placeholder="Ex: a12af162adfe84">
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+
+            <button type="button" class="btn btn-block btn-primary" (click)="createService()">Create Service</button>
+            <button type="button" class="btn btn-block btn-secondary" [routerLink]="['/service/select']">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->

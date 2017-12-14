@@ -1,0 +1,174 @@
+<div class="animated fadeIn">
+  <!-- No selected service -->
+  <div class="row" *ngIf="!iotService.selectedService">
+    <div class="col-12 text-center lead">No selected service</div>
+  </div> <!--/.row-->
+
+  <!-- Service selected -->
+  <div class="row" *ngIf="iotService.selectedService">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+          <strong>Devices</strong>
+          <small>IDs</small>
+        </div>
+        <div class="card-body">
+          <div *ngIf="devices?.length > 0">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-action"
+                [ngClass]="{'list-group-item-info': selectedDevice != null && device == selectedDevice}"
+                *ngFor="let device of devices"
+                (click)="selectDevice(device)">
+                {{device.device_id}}
+              </li>
+            </ul>
+          </div>
+          <div *ngIf="!(devices?.length > 0)" style="text-align: center;">
+            No registered devices
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="registerNewDeviceModal.show()">
+          Register New Device
+        </button>
+      </div>
+    </div> <!--/.col-->
+
+    <div class="col-sm-8">
+      <div>
+        <!-- Nav tabs -->
+        <tabset>
+          <tab>
+            <ng-template tabHeading><i class="icon-info"></i> Info</ng-template>
+            <div *ngIf="!selectedDevice">
+              No device selected
+            </div>
+            <div *ngIf="selectedDevice">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="selectedDeviceSchema">Device Schema</label>
+                    <textarea id="selectedDeviceSchema" name="selectedDeviceSchema" rows="15" class="form-control" [(ngModel)]="selectedDeviceSchema" readonly></textarea>
+                  </div>
+                </div> <!--/.col-->
+              </div> <!--/.row-->
+            </div>
+          </tab>
+          <tab>
+            <ng-template tabHeading><i class="icon-paper-plane"></i> Send Measurements</ng-template>
+            <div *ngIf="!selectedDevice">
+              No device selected
+            </div>
+            <div *ngIf="selectedDevice">
+              <div *ngIf="selectedDevice.attributes.length == 0">
+                No attributes registered for the device
+              </div>
+              <div *ngIf="selectedDevice.attributes.length > 0">
+                Attributes to send measurements for device {{selectedDevice.device_id}}
+
+
+
+              </div>
+            </div>
+          </tab>
+          <tab>
+            <ng-template tabHeading><i class="icon-energy"></i> Send Commands</ng-template>
+            <div *ngIf="!selectedDevice">
+              No device selected
+            </div>
+            <div *ngIf="selectedDevice">
+              <div *ngIf="selectedDevice.commands.length == 0">
+                No commands registered for the device
+              </div>
+              <div *ngIf="selectedDevice.commands.length > 0">
+                Commands for the device {{selectedDevice.device_id}}
+
+
+
+
+              </div>
+            </div>
+          </tab>
+        </tabset>
+      </div>
+    </div> <!--/.col-->
+  </div> <!--/.row-->
+</div>
+
+<!-- Register device modal -->
+<div bsModal #registerNewDeviceModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="registerDeviceLabel" aria-hidden="true">
+  {{ bindModal(registerNewDeviceModal) }}
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Register New Device</h4>
+        <button type="button" class="close" (click)="registerNewDeviceModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="deviceId">Device ID</label>
+                  <input type="text" class="form-control" id="deviceId" [(ngModel)]="deviceId" placeholder="Ex: STELA_LDR_001">
+                </div>
+              </div> <!--/.col-->
+            </div> <!--/.row-->
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="entityId">Entity Id</label>
+                  <input type="text" class="form-control" id="entityId" [(ngModel)]="entityId" placeholder="Ex: LDR001">
+                </div>
+              </div> <!--/.col-->
+            </div> <!--/.row-->
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="deviceEndpoint">Device Endpoint (opt.)</label>
+                  <input type="text" class="form-control" id="deviceEndpoint" [(ngModel)]="endpoint" placeholder="Ex: 10.7.12.101:1234">
+                </div>
+              </div> <!--/.col-->
+            </div> <!--/.row-->
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="deviceProtocol">Protocol (opt.)</label>
+                  <input type="text" class="form-control" id="deviceProtocol" [(ngModel)]="protocol" placeholder="Default: IoTA-UL">
+                </div>
+              </div> <!--/.col-->
+            </div> <!--/.row-->
+          </div> <!--/.col-->
+
+          <div class="col-sm-7">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="deviceSchema">Device Schema</label>
+                  <textarea id="deviceSchema" name="deviceSchema" rows="15" class="form-control" [(ngModel)]="deviceSchema" placeholder="Select or type an device schema JSON..."></textarea>
+
+                  <input #fileInput type="file" accept=".json" (change)="fileChange($event)" hidden />
+                  <button type="button" class="btn btn-primary" (click)="fileInput.click()">
+                    <i class="fa fa-folder-open"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-primary">
+                    <i class="fa fa-question"></i>
+                  </button>
+                </div>
+              </div> <!--/.col-->
+            </div> <!--/.row-->
+          </div> <!--/.col-->
+        </div> <!--/.row-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="registerNewDeviceModal.hide()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="registerDevice()">Register Device</button>
+      </div>
+    </div> <!-- /.modal-content -->
+  </div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
