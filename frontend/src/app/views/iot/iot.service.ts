@@ -4,11 +4,13 @@ import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/toPromise';
 import { ServiceService } from '../service/service.service';
 import { Service } from '../../domain/service';
+import { environment } from '../../../environments/environment';
+
 
 @Injectable()
 export class IotService {
 
-  private baseUrl = 'http://localhost:8000/devices';
+  private baseUrl = `${environment.serverRoot}/devices`;
 
   selectedService: Service;
   subscription: Subscription;
