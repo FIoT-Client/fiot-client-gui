@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import { environment } from '../../../environments/environment';
 
 
 @Injectable()
 export class SettingsService {
 
-  private baseUrl = 'http://localhost:8000/settings';
+  private baseUrl = `${environment.serverRoot}/settings`;
 
   constructor(private http: Http) { }
 

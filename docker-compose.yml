@@ -8,6 +8,8 @@ services:
       - "8000"
     ports:
       - "8000:8000"
+    volumes:
+      - ./config.ini:/code/config.ini
 
   frontend:
     image: fiot-client-gui/frontend
@@ -16,6 +18,6 @@ services:
     expose:
       - "80"
     ports:
-      - "80:80"
+      - "4200:80"
     links:
       - backend

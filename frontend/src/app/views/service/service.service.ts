@@ -4,12 +4,13 @@ import 'rxjs/add/operator/toPromise';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import { Service } from '../../domain/service';
+import { environment } from '../../../environments/environment';
 
 
 @Injectable()
 export class ServiceService {
 
-  private baseUrl = 'http://localhost:8000/services';
+  private baseUrl = `${environment.serverRoot}/services`;
 
   private serviceSubject = new BehaviorSubject<Service>(null);
   serviceObservable: Observable<Service> = this.serviceSubject.asObservable();

@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import { environment } from '../../../environments/environment';
+
 
 @Injectable()
 export class ContextService {
 
-  private baseUrl = 'http://localhost:8000/entities';
+  private baseUrl = `${environment.serverRoot}/entities`;
   private serviceName = 'StelaService';
   private servicePath = '/stela';
   private apiKey = '246d9fa2a1a111e7844360f81db4b630';
