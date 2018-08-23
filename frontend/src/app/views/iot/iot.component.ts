@@ -1,7 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { ModalDirective } from 'ngx-bootstrap/modal/modal.component';
-import { IotService } from './iot.service';
+import { Component, OnInit } from '@angular/core';
+import { IotService } from '../../services/iot.service';
 
 @Component({
   templateUrl: 'iot.component.html'

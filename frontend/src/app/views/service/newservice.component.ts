@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Service } from '../../domain/service';
-import { ServiceService } from './service.service';
+import { ServiceService } from '../../services/service.service';
 
 @Component({
   selector: 'app-newservice',

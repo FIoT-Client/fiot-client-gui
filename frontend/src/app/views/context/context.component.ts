@@ -1,7 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { ModalDirective } from 'ngx-bootstrap/modal/modal.component';
-import { ContextService } from './context.service';
+import { Component, OnInit } from '@angular/core';
+import { ContextService } from '../../services/context.service';
 
 @Component({
   templateUrl: 'context.component.html'

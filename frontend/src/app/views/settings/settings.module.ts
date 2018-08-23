@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { SettingsComponent } from './settings.component';
 import { SettingsRoutingModule } from './settings-routing.module';
-import { SettingsService } from './settings.service';
+import { SettingsService } from '../../services/settings.service';
 
 @NgModule({
   imports: [

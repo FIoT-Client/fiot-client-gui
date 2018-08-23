@@ -9,7 +9,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { IotComponent } from './iot.component';
 import { IotRoutingModule } from './iot-routing.module';
-import { IotService } from './iot.service';
+import { IotService } from '../../services/iot.service';
 
 @NgModule({
   imports: [

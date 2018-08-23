@@ -8,7 +8,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { ContextComponent } from './context.component';
 import { ContextRoutingModule } from './context-routing.module';
-import { ContextService } from './context.service';
+import { ContextService } from '../../services/context.service';
 
 @NgModule({
   imports: [
