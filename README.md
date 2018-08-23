@@ -2,107 +2,133 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-The FIoT-Client GUI is a Angular + Django WEB application for things and context management on FIWARE platform using FIoT-Client-Python library. Actually in development.
+The FIoT-Client GUI is an application for things and context management on FIWARE platform using FIoT-Client-Python library. 
+The application is built on top of Angular and Django technologies, on frontend and backend projects, respectively. Frontend is also based on [CoreUI](https://github.com/coreui/coreui-free-angular-admin-template) project.
+The project is actually in development.
 
-## Getting Started
 
-<!--These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. -->
+## Table of Contents
 
-### Prerequisites
+* [Installation and usage](#installation-and-usage)
+* [What's included](#whats-included)
+* [Documentation](#documentation)
+* [Contributing](#contributing)
+* [Versioning](#versioning)
+* [Creators](#creators)
+* [Copyright and license](#copyright-and-license)
+* [Support FIoT-Client GUI Development](#support-fiot-client-gui-development)
 
-<!--
-What things you need to install the software and how to install them
 
-```
-Give examples
-```
- -->
+## Installation and usage
 
-### Installing
+#### Clone repo
+``` bash
+# clone the repo
+$ git clone https://github.com/FIoT-Client/fiot-client-gui.git
 
-<!--
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+# go into app's directory
+$ cd fiot-client-gui
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
--->
+### Backend
+#### Install dependencies
+``` bash
+# go into front end's directory
+$ cd backend
 
-## Running the tests
-
-<!--
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+# install app's dependencies
+$ pip install -r requirements.txt
 ```
 
-### And coding style tests
+#### Usage
+``` bash
+# serve with hot reloading at localhost:8000
+$ python manage.py runserver
+```
 
-Explain what these tests test and why
+### Frontend
+#### Install dependencies
+``` bash
+# go into front end's directory
+$ cd frontend
+
+# install app's dependencies
+$ npm install
+```
+
+#### Usage
+``` bash
+# serve with hot reloading at localhost:4200
+$ ng serve
+
+# build for production with minification
+$ ng build
+```
+
+
+## What's included
+
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
-Give an example
+fiot-client-gui/
+├── backend/
+|   ├── fiotclientgui/
+|   ├── Dockerfile
+|   ├── ...
+|   ├── manage.py
+|   └── requirements.txt
+|
+├── frontend/
+|   ├── e2e/
+|   ├── src/
+|   │   ├── app/
+|   │   ├── assets/
+|   │   ├── environments/
+|   │   ├── scss/
+|   │   ├── index.html
+|   │   └── ...
+|   ├── .angular.json
+|   ├── package.json
+|   └── ...
+|
+├── mockups/
+├── ...
+├── config.ini
+└── docker-compose.yml
 ```
--->
 
-## Deployment
+## Documentation
 
-<!--
-Add additional notes about how to deploy this on a live system
+Under construction.
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
--->
 
 ## Contributing
 
-<!--
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
--->
+Under construction.
+
 
 ## Versioning
 
-<!--
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
--->
+Under construction.
 
-## Authors
 
-* **Lucas Cristiano Calixto Dantas** - *Initial work and developer*
-* **Lucas Ramon Bandeira da Silva** - *Project collaborator*
-* **Carlos Eduardo da Silva** - *Professor advisor*
+## Creators
 
-<!--
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
--->
+**Lucas Cristiano Calixto Dantas** - *Initial work and project developer*
+* <https://github.com/lucascriistiano>
+* <https://linkedin.com/in/lucas-cristiano/>
 
-## License
+**Lucas Ramon Bandeira da Silva** - *Project collaborator*
+
+**Carlos Eduardo da Silva** - *Professor advisor*
+
+
+## Copyright and license
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Acknowledgments
 
-<!--
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
--->
+## Support FIoT-Client GUI Development
 
+Under construction.
