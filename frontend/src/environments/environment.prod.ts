@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  serverRoot: `http://fiot-client-gui-backend:8000`
 };
